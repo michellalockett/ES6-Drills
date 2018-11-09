@@ -19,17 +19,36 @@ favMovie();
 
 
 let getFirstName = name => {
-	let firstName = name.split('Michella1');
-	return firstName[0];
-
+	let firstName = name.split(' ');
+    return firstName[0];
 };
 
-let getFirstName2 = (firstName, lastName) => {
-    console.log(`${firstName}`);
-}
+let getFirstName2 = name => name.split(' ')[0];
 
-getFirstName = ('Creamcheese', 'Cake');
-getFirstName2 = ('Lemon', 'Poundcake');
+let firstName = getFirstName('Michella Lockett');
+let firstName2 = getFirstName2('Gerald Garner');
+console.log(firstName);
+console.log(firstName2);
+
+
+
+function getStats(a, b) {
+	let squaredResult = a * a + b * b;
+	let product = a * b;
+	return {
+		squaredResult,
+		product,
+	};
+}
+let check = getStats(2, 3);
+console.log(`The squared result is ${check.squaredResult} and the product is ${check.product}.`);
+
+let user = {
+	name: 'Nick',
+	profession: 'student',
+	age: 26,
+};
+
 
 
 
